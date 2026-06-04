@@ -11,13 +11,21 @@ It separates scripts, raw data, cleaned data, and the Shiny app itself for clari
 shiny-template/
 ├─ README.md              # Project documentation
 ├─ .gitignore             # Files ignored by Git
-├─ scripts/               # Data pipeline scripts
-│  ├─ 01_download.R
-│  ├─ 02_clean.R
-│  └─ 03_analysis.R
+├─ programs/              # Data pipeline scripts
+│  ├─ _master.qmd         # The master file to load all the packages, change the directory, and run all the files
+│  ├─  cl_00.qmd          # The file changing the format of the file, CSV is more preferred 
+|  ├─  cl_01.qmd          # The file that cleans out the relocated observations
+|  ├─  cl_02.qmd          # The file that you rename the variables, create the variables you need
+|  ├─  cl_03.qmd          # The file that you restrict the sample 
+│  └─  an_01.qmd          # The file that you do your first analysis
+|
+├─ graph/
+├─ log/
+├─ table/
+|  
 ├─ data/
-│  ├─ raw/                # Immutable input data (not committed if large/private)
-│  └─ cleaned/            # Processed outputs from scripts
+│  ├─ source/             # Raw Input Dataset
+│  └─ outcome/            # Processed outputs from scripts
 ├─ shiny/                 # Shiny application
 │  ├─ app.R
 │  ├─ global.R
