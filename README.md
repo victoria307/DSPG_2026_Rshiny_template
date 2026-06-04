@@ -55,8 +55,8 @@ renv::snapshot()
 ```
 
 ### 3. Add Your Data
-- Place **raw input data** in `data/raw/` (small, non-sensitive only).  
-- Run scripts in `scripts/` to process data into `data/cleaned/`.  
+- Place **raw input data** in `data/source/`.  
+- Run scripts in `programs/` to process data into `data/outcome/`.  
 
 ### 4. Run the Shiny App
 ```r
